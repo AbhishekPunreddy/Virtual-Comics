@@ -3,6 +3,11 @@ import data from './data2.js'
 const container = document.querySelector('.slide-container')
 const nextBtn = document.querySelector('.next-btn')
 const prevBtn = document.querySelector('.prev-btn')
+const leftBtn = document.querySelector('.left-btn')
+const rightBtn = document.querySelector('.right-btn')
+
+var startTime ;
+var endTime;
 // if length is 1 hide buttons
 if (data.length === 1) {
   nextBtn.style.display = 'none'
@@ -35,6 +40,11 @@ container.innerHTML = people
  </article>`
   })
   .join('')
+
+window.addEventListener('load', (event) => {
+    startTime = new Date();
+    console.log(startTime)
+});
 
 const startSlider = (type) => {
   // get all three slides active,last next
@@ -73,3 +83,18 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   startSlider('prev')
 })
+leftBtn.addEventListener('click', () => {
+  window.localStorage.setItem("story2_experimental_response","The guy on the left");
+  getValues()
+})
+rightBtn.addEventListener('click', () => {
+  window.localStorage.setItem("story2_experimental_response","The guy on the right");
+  getValues()
+})
+const getValues =() =>{
+  endTime = new Date();
+  let timeElasped = (endTime - startTime)/1000;
+  console.log(timeElasped)
+  window.location.href='story3.html'
+  window.localStorage.setItem("story2",timeElasped);
+}
