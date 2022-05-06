@@ -26,7 +26,7 @@ container.innerHTML = people
       position = 'active'
     }
     if (slideIndex === people.length - 1) {
-        
+      
       position = 'last'
     }
     if (data.length <= 1) {
@@ -42,9 +42,9 @@ container.innerHTML = people
   .join('')
 
 window.addEventListener('load', (event) => {
-    startTime = new Date();
+    
     localStorage.clear();
-    console.log(startTime)
+    
 });
 const startSlider = (type) => {
   // get all three slides active,last next
@@ -55,6 +55,8 @@ const startSlider = (type) => {
     document.getElementsByClassName('question')[0].style.visibility = 'visible'
     nextBtn.style.display = 'none'
     prevBtn.style.display = 'none'
+    startTime = new Date();
+    console.log(startTime)
 
     
   }
@@ -68,6 +70,7 @@ const startSlider = (type) => {
     next = last.previousElementSibling
     if (!next) {
       next = container.lastElementChild
+      
     }
     next.classList.remove('next')
     next.classList.add('last')

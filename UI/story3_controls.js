@@ -26,7 +26,7 @@ container.innerHTML = people
       position = 'active'
     }
     if (slideIndex === people.length - 1) {
-        
+
       position = 'last'
     }
     if (data.length <= 1) {
@@ -41,8 +41,7 @@ container.innerHTML = people
   })
   .join('')
 window.addEventListener('load', (event) => {
-    startTime = new Date();
-    console.log(startTime)
+
 });
 
 const startSlider = (type) => {
@@ -54,7 +53,8 @@ const startSlider = (type) => {
     document.getElementsByClassName('question')[0].style.visibility = 'visible'
     nextBtn.style.display = 'none'
     prevBtn.style.display = 'none'
-
+    startTime = new Date();
+    console.log(startTime)
     
   }
   active.classList.remove('active')
@@ -102,7 +102,7 @@ const getValues =() =>{
     text = text + " " + keys[i] + " : " + localStorage.getItem(keys[i])
   }
   var link = document.createElement('a');
-  link.setAttribute('download', 'Control_Condition.txt');
+  link.setAttribute('download', 'Control_Condition_Responses.txt');
   link.href = makeTextFile(text);
   document.body.appendChild(link);
 
