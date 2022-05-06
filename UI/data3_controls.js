@@ -16,6 +16,14 @@ const people = [
     {
       img:
       "./story3_controls/4.jpg"
+    },
+    {
+      img:
+      "./story3_controls/5.jpg"
+    },
+    {
+      img:
+      "./story3_controls/6.jpg"
     }
   ];
   

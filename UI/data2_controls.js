@@ -20,6 +20,10 @@ const people = [
     {
       img:
       "./story2_controls/5.jpg"
+    },
+    {
+      img:
+      "./story2_controls/6.jpg"
     }
   ];
   
